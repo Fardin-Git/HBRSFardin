@@ -9,13 +9,11 @@ class ContainerTest {
     Member m1;
     Member m2;
     Container containerAdd;
-    Container containerDel;
     @BeforeEach
     void setup(){
         m1 = new ConcreteMember(1);
         m2 = new ConcreteMember(2);
-        containerAdd = new Container();
-        containerDel = new Container();
+        containerAdd = Container.getContainer();
     }
     @Test
     void addMemberTest() throws ContainerException {
@@ -27,18 +25,17 @@ class ContainerTest {
     }
     @Test
     void deleteMemberTest() throws ContainerException {
-        assertEquals("Kein Member mit entsprechender ID vorhanden.", containerDel.deleteMember(1));
-        containerDel.addMember(m1);
-        containerDel.deleteMember(1);
-        assertEquals(containerDel.size(), 0);
-        containerDel.addMember(m2);
-        assertEquals("Kein Member mit entsprechender ID vorhanden.", containerDel.deleteMember(1));
-        containerDel.addMember(m1);
-        assertEquals("Kein Member mit entsprechender ID vorhanden.", containerDel.deleteMember(3));
-        containerDel.deleteMember(2);
-        assertEquals(containerDel.size(), 1);
-        containerDel.deleteMember(1);
-        assertEquals(containerDel.size(), 0);
-        assertEquals("Kein Member mit entsprechender ID vorhanden.", containerDel.deleteMember(1));
+        containerAdd.addMember(m1);
+        containerAdd.deleteMember(1);
+        assertEquals(containerAdd.size(), 0);
+        containerAdd.addMember(m2);
+        assertEquals("Kein Member mit entsprechender ID vorhanden.", containerAdd.deleteMember(1));
+        containerAdd.addMember(m1);
+        assertEquals("Kein Member mit entsprechender ID vorhanden.", containerAdd.deleteMember(3));
+        containerAdd.deleteMember(2);
+        assertEquals(containerAdd.size(), 1);
+        containerAdd.deleteMember(1);
+        assertEquals(containerAdd.size(), 0);
+        assertEquals("Kein Member mit entsprechender ID vorhanden.", containerAdd.deleteMember(1));
     }
 }
