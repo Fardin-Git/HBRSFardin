@@ -28,9 +28,12 @@ public class PersistenceStrategyStream<E extends Member> implements PersistenceS
             ObjectOutputStream objout = new ObjectOutputStream(file);
             objout.writeObject(member);
             objout.close();
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.FileNotFound,
+                    "unzulässiges Speichern" );
+        } catch (IOException e){
             throw new PersistenceException(PersistenceException.ExceptionType.ImplementationNotAvailable,
-                    "unzulässige Operation" );
+                    "Fehler beim Speichern" );
         }
     }
 
@@ -47,16 +50,18 @@ public class PersistenceStrategyStream<E extends Member> implements PersistenceS
             ObjectInputStream ois = new ObjectInputStream(fis);
             Object obj = ois.readObject();
             if (obj instanceof List<?>) {
-                List newListe = (List) obj;
-                return newListe;
+                return (List) obj;
             } else {
                 return null;
             }
         } catch (FileNotFoundException e) {
             return null;
-        } catch (Exception e) {
+        } catch (IOException e) {
             throw new PersistenceException(PersistenceException.ExceptionType.ImplementationNotAvailable,
-                    "");
+                    "Fehler beim Speichern");
+        } catch (ClassNotFoundException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.NoStrategyIsSet,
+                    "Klasse nicht gefunden");
         }
     }
 }
