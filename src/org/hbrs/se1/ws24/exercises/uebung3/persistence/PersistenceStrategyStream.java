@@ -23,11 +23,12 @@ public class PersistenceStrategyStream<E extends Member> implements PersistenceS
      */
     public void save(List<E> member) throws PersistenceException {
         try {
-            File memberObj = new File(location);
-            FileOutputStream file = new FileOutputStream(memberObj);
+            FileOutputStream file = new FileOutputStream(location);
             ObjectOutputStream objout = new ObjectOutputStream(file);
             objout.writeObject(member);
+
             objout.close();
+            file.close();
         } catch (FileNotFoundException e) {
             throw new PersistenceException(PersistenceException.ExceptionType.FileNotFound,
                     "unzulässiges Speichern" );
@@ -45,17 +46,19 @@ public class PersistenceStrategyStream<E extends Member> implements PersistenceS
      */
     public List<E> load() throws PersistenceException {
         try {
-            File memberObj = new File(location);
-            FileInputStream fis = new FileInputStream(memberObj);
+            FileInputStream fis = new FileInputStream(location);
             ObjectInputStream ois = new ObjectInputStream(fis);
             Object obj = ois.readObject();
+            fis.close();
+            ois.close();
             if (obj instanceof List<?>) {
                 return (List) obj;
             } else {
                 return null;
             }
         } catch (FileNotFoundException e) {
-            return null;
+            throw new PersistenceException(PersistenceException.ExceptionType.ImplementationNotAvailable,
+                    "Datei nicht gefunden");
         } catch (IOException e) {
             throw new PersistenceException(PersistenceException.ExceptionType.ImplementationNotAvailable,
                     "Fehler beim Speichern");

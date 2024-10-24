@@ -1,17 +1,19 @@
 package org.hbrs.se1.ws24.exercises.uebung2;
 
 import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceException;
-import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyStream;
+import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Container {
     private List<Member> memberList = new ArrayList<>();
-    public PersistenceStrategyStream<Member> stream = new PersistenceStrategyStream<>();
-
-    private Container(){}
-    private static class ContainerHelper{
+    private PersistenceStrategy<Member> strategy;
+    public void setStrategy(PersistenceStrategy<Member> s){
+        strategy = s;
+    }
+    private Container(){ }
+    private static class ContainerHelper {
         private static final Container container = new Container();
     }
     public static Container getContainer(){
@@ -37,13 +39,19 @@ public class Container {
         return memberList.size();
     }
     public void store() throws PersistenceException {
-        stream.save(memberList);
+        try {
+            strategy.save(memberList);
+        } catch (UnsupportedOperationException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.ImplementationNotAvailable,
+                    "Strategie nicht implementiert");
+        }
     }
     public void load() throws PersistenceException {
-        if (stream.load() == null){
-
-        } else {
-            memberList = stream.load();
+        try {
+            memberList = strategy.load();
+        } catch (UnsupportedOperationException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.ImplementationNotAvailable,
+                    "Strategie nicht implementiert");
         }
     }
     public List<Member> getCurrentList(){

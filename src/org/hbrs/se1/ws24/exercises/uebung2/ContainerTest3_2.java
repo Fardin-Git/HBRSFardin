@@ -6,29 +6,34 @@ import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceException;
 import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyMongoDB;
 import org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyStream;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 class ContainerTest3_2 {
     Container container = Container.getContainer();
     @Test
-    void nullTest() throws PersistenceException {
-        container.stream.setLocation("object20.ser");
-        assertNull(container.stream.load());
+    void nullTest()  {
+        PersistenceStrategyStream<Member> m = new PersistenceStrategyStream<>();
+        m.setLocation("object20.ser");
+        container.setStrategy(m);
+        assertThrows(PersistenceException.class, ()-> container.load());
     }
     @Test
-    void mongoDBTest() throws UnsupportedOperationException {
-        PersistenceStrategyMongoDB m = new PersistenceStrategyMongoDB();
-        assertThrows(UnsupportedOperationException.class, ()-> m.load());
+    void mongoDBTest() {
+        PersistenceStrategyMongoDB<Member> m = new PersistenceStrategyMongoDB();
+        container.setStrategy(m);
+        assertThrows(PersistenceException.class, ()-> container.store());
     }
     @Test
-    void directoryTest() throws PersistenceException {
-        PersistenceStrategyStream p = new PersistenceStrategyStream();
-        p.setLocation("wrong_directory");
-        assertThrows(NullPointerException.class, (Executable) p.load());
+    void directoryTest() {
+        PersistenceStrategyStream<Member> p = new PersistenceStrategyStream();
+        p.setLocation("wrong/directory");
+        container.setStrategy(p);
+        assertThrows(PersistenceException.class, ()-> container.store());
     }
     @Test
     void roundTripTest() throws ContainerException, PersistenceException {
-        container.stream.setLocation("object2.ser");
+        PersistenceStrategyStream<Member> m = new PersistenceStrategyStream<>();
+        m.setLocation("object2.ser");
+        container.setStrategy(m);
 
         container.addMember(new ConcreteMember(1));
         assertEquals(1, container.size());

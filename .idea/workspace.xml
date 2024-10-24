@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11b931b2-f8a2-4546-af99-1df1f0f211cc" name="Changes" comment="Uebung3_2V2">
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung4/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung4/UserStoryControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung4/UserStoryMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung4/UserStoryMemberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/ContainerTest3_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/ContainerTest3_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung3/persistence/PersistenceStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung3/persistence/PersistenceStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung3/persistence/PersistenceStrategyStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung3/persistence/PersistenceStrategyStream.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,16 +76,20 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.hbrs.se1.ws24.exercises.uebung4" />
       <recent name="org.hbrs.se1.ws24.exercises.uebung2" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.hbrs.se1.ws24.exercises.uebung4" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ContainerTest3_2">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung2.Main" />
+  <component name="RunManager" selected="Application.org.hbrs.se1.ws24.exercises.uebung4.Main">
+    <configuration name="org.hbrs.se1.ws24.exercises.uebung4.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung4.Main" />
       <module name="codesSE2024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung2.*" />
+          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,64 +97,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContainerTest3_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserStoryMemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="codesSE2024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung2.*" />
+          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung2" />
-      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung2.ContainerTest3_2" />
+      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung4" />
+      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung4.UserStoryMemberTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContainerTest3_2.directoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserStoryMemberTest.IDTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="codesSE2024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung2.*" />
+          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung2" />
-      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung2.ContainerTest3_2" />
-      <option name="METHOD_NAME" value="directoryTest" />
+      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung4" />
+      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung4.UserStoryMemberTest" />
+      <option name="METHOD_NAME" value="IDTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContainerTest3_2.nullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserStoryMemberTest.compareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="codesSE2024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung2.*" />
+          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung2" />
-      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung2.ContainerTest3_2" />
-      <option name="METHOD_NAME" value="nullTest" />
+      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung4" />
+      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung4.UserStoryMemberTest" />
+      <option name="METHOD_NAME" value="compareTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContainerTest3_2.roundTripTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserStoryMemberTest.prioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="codesSE2024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung2.*" />
+          <option name="PATTERN" value="org.hbrs.se1.ws24.exercises.uebung4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung2" />
-      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung2.ContainerTest3_2" />
-      <option name="METHOD_NAME" value="roundTripTest" />
+      <option name="PACKAGE_NAME" value="org.hbrs.se1.ws24.exercises.uebung4" />
+      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws24.exercises.uebung4.UserStoryMemberTest" />
+      <option name="METHOD_NAME" value="prioTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ContainerTest3_2" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ContainerTest3_2.nullTest" />
-        <item itemvalue="JUnit.ContainerTest3_2.roundTripTest" />
-        <item itemvalue="JUnit.ContainerTest3_2.directoryTest" />
+        <item itemvalue="Application.org.hbrs.se1.ws24.exercises.uebung4.Main" />
+        <item itemvalue="JUnit.UserStoryMemberTest" />
+        <item itemvalue="JUnit.UserStoryMemberTest.compareTest" />
+        <item itemvalue="JUnit.UserStoryMemberTest.IDTest" />
+        <item itemvalue="JUnit.UserStoryMemberTest.prioTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729246136000</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Uebung3_2V2">
+      <created>1729247588680</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729247588680</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +229,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung3/persistence/PersistenceStrategyStream.java</url>
-          <line>45</line>
+          <line>46</line>
           <properties class="org.hbrs.se1.ws24.exercises.uebung3.persistence.PersistenceStrategyStream" method="load">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -222,7 +238,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/ContainerTest3_2.java</url>
-          <line>29</line>
+          <line>32</line>
           <properties class="org.hbrs.se1.ws24.exercises.uebung2.ContainerTest3_2" method="roundTripTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -239,29 +255,52 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java</url>
-          <line>19</line>
-          <properties class="org.hbrs.se1.ws24.exercises.uebung2.Container" method="addMember">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Main.java</url>
-          <line>5</line>
+          <line>6</line>
           <properties class="org.hbrs.se1.ws24.exercises.uebung2.Main" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung4/UserStoryControl.java</url>
+          <line>11</line>
+          <properties class="org.hbrs.se1.ws24.exercises.uebung4.UserStoryControl" method="userStoryTerminal">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/MemberView.java</url>
+          <line>5</line>
+          <properties class="org.hbrs.se1.ws24.exercises.uebung2.MemberView" method="dump">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/Container.java</url>
+          <line>40</line>
+          <properties class="org.hbrs.se1.ws24.exercises.uebung2.Container" method="store">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/org/hbrs/se1/ws24/exercises/uebung2/ContainerTest3_2.java</url>
-          <line>32</line>
+          <line>37</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.hbrs.se1.ws24.exercises.uebung2.Container" memberName="memberList" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
