@@ -17,7 +17,7 @@ public class UserStoryMember implements Member, Serializable, Comparable<UserSto
     }
     @Override
     public String toString(){
-        return           "\u001B[31m\u001B[4m\u001B[1mUser Story (ID = " +  userStory[0] + "):\u001B[0m"
+        return           "\n\u001B[31m\u001B[4m\u001B[1mUser Story (ID = " +  userStory[0] + "):\u001B[0m"
 
                 + "\n" + "Titel: "+             userStory[1]
                 + "\n" + "Akzeptanzkriterium: "+userStory[2]
@@ -26,7 +26,7 @@ public class UserStoryMember implements Member, Serializable, Comparable<UserSto
                 + "\n" + "Relatives Risiko: "+  userStory[5]
                 + "\n" + "Relativer Aufwand: "+ userStory[6]
                 + "\n" + "Projekt Zuordnung: "+ userStory[7]
-                + "\n" + "Prio: "+              userStory[8] + "\n";
+                + "\n" + "Prio: "+              userStory[8];
     }
     public double getPrio(){
         return Double.parseDouble(userStory[8]);

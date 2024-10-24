@@ -21,28 +21,28 @@ public class UserStoryControl {
             switch (eingabe) {
                 case "befehl enter" -> {
                     container.addMember(enter());
-                    System.out.println("User Story hinzugefügt, bitte geben Sie ihre nächste Eingabe an:");
+                    System.out.println("\nUser Story hinzugefügt, bitte geben Sie ihre nächste Eingabe an:\n");
                 }
                 case "befehl store" -> {
-                    System.out.println("Geben sie den Dateinamen zum Speichern an: ");
+                    System.out.println("\nGeben sie den Dateinamen zum Speichern an: \n");
                     p.setLocation(sc.nextLine());
                     container.store();
-                    System.out.println("User Story erfolgreich gespeichert, bitte geben Sie ihre nächste Eingabe an: ");
+                    System.out.println("\nUser Story erfolgreich gespeichert, bitte geben Sie ihre nächste Eingabe an: \n");
                 }
                 case "befehl load" -> {
-                    System.out.println("Geben sie den Dateinamen zum Laden an: ");
+                    System.out.println("\nGeben sie den Dateinamen zum Laden an: \n");
                     p.setLocation(sc.nextLine());
                     container.load();
-                    System.out.println("User Story erfolgreich geladen, bitte geben Sie ihre nächste Eingabe an: ");
+                    System.out.println("\nUser Story erfolgreich geladen, bitte geben Sie ihre nächste Eingabe an: \n");
                 }
                 case "befehl dump" -> container.getCurrentList().stream().sorted().forEach(System.out::println);
                 case "befehl exit" ->{
                     sc.close();
-                    System.out.println("Programm erfolgreich beendet.");
+                    System.out.println("\nProgramm erfolgreich beendet.");
                     return;
                 }
-                case "befehl help" -> System.out.println("Mögliche Befehle:\n 'befehl enter'\n 'befehl store'\n 'befehl load'\n 'befehl dump'\n 'befehl exit'\n ");
-                default -> System.out.println("Ungültige Eingabe, siehe 'befehl help'.");
+                case "befehl help" -> System.out.println("\nMögliche Befehle:\n 'befehl enter'\n 'befehl store'\n 'befehl load'\n 'befehl dump'\n 'befehl exit'\n ");
+                default -> System.out.println("\nUngültige Eingabe, siehe 'befehl help'.\n");
             }
         }
     }
@@ -50,7 +50,7 @@ public class UserStoryControl {
     private static UserStoryMember enter(){
         String[] userStory = new String[9];
         Scanner sc = new Scanner(System.in);
-        System.out.print("User Story ID: "); userStory[0] = sc.nextLine();
+        System.out.print("\nUser Story ID: "); userStory[0] = sc.nextLine();
         System.out.print("Titel: "); userStory[1] = sc.nextLine();
         System.out.print("Akzeptanzkriterium: "); userStory[2] = sc.nextLine();
         System.out.print("Relativer Mehrwert: "); double mehrw = sc.nextDouble();
