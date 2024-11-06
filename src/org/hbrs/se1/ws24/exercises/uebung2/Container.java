@@ -9,16 +9,19 @@ import java.util.List;
 public class Container {
     private List<Member> memberList = new ArrayList<>();
     private PersistenceStrategy<Member> strategy;
+    private static Container container = null;
+    private Container(){ }
+
+    public static synchronized Container getContainer(){
+        if (container == null){
+            container = new Container();
+        }
+        return container;
+    }
     public void setStrategy(PersistenceStrategy<Member> s){
         strategy = s;
     }
-    private Container(){ }
-    private static class ContainerHelper {
-        private static final Container container = new Container();
-    }
-    public static Container getContainer(){
-        return ContainerHelper.container;
-    }
+
     public void addMember(Member member) throws ContainerException{
         for (Member oldMem: memberList){
             if (oldMem.getID().equals(member.getID())) throw new ContainerException(member.getID());
